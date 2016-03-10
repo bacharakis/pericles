@@ -10,6 +10,7 @@
 <div class="row column">
 
   <head>
+
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,18 +49,21 @@
                     <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Semantic Technologies & DP</a></li>
                     <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Evolving Semantics: Ontology Evolution & Semantic Drifts</a></li>
                   </ul>
-                  <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Modules</button>
-                  <br>
-                  <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                    <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Module 2</a>
-                    </li>
-                    <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Module 3</a>
-                    </li>
+                  <div class="moreExpandWrapp">
+                      <a href="javascript:void(0)" rel="#aboutExpand" class="moreExpand">More Modules <span class="fi-plus"></span></a>
+                      <div type="hidden" class="moreExpandContent" id="aboutExpand">
+                        <ul>
+                        <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="module.html">Module 2</a>
+                        </li>
+                        <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="module.html">Module 3</a>
+                        </li>
 
-                    <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Module 4</a></li>
-                    <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Module 5</a></li>
-                    <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="part.html">Module 6</a></li>
-                  </ul>
+                        <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="module.html">Module 4</a></li>
+                        <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="module.html">Module 5</a></li>
+                        <li><i class="fi-folder"></i>&nbsp;&nbsp;<a href="module.html">Module 6</a></li>
+                      </ul>
+                      </div>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -144,7 +148,7 @@
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation.js"></script>
     <script src="js/app.js"></script>
   </body>
 
