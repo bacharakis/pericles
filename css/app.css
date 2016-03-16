@@ -17,14 +17,7 @@
   color: #757D75;
 }
 
-.article-card .card-content a i {
-  font-weight: 300;
-  color: #757D75;
-  margin: 0 .5rem;
-  padding: 5px 7px 5px 7px;
-  border: 1px solid #757D75;
-  border-radius: 50%;
-}
+
 .article-card .card-content img.post-icon {
   position: absolute;
   width: 3rem;
@@ -195,4 +188,65 @@
   }
 .vertical-align {
   padding-top: 5px;
+}
+
+/* BE SURE TO INCLUDE THE CSS RESET FOUND IN THE DEMO PAGE'S CSS */
+
+/*------------------------------------*\
+    NAV
+\*------------------------------------*/
+#nav{
+    list-style:none;
+    font-weight:bold;
+    margin-bottom:10px;
+    float:left; /* Clear floats */
+    width:100%;
+    margin-left: 0em;
+    /* Bring the nav above everything else--uncomment if needed.
+    position:relative;
+    z-index:5;
+    */
+}
+#nav li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+}
+#nav a{
+    display:block;
+    padding:5px;
+    color:#000000;
+    text-decoration:none;
+}
+#nav a:hover{
+    color:#079CCD;
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+    border: 1px solid #d7d7d7;
+    box-shadow: 2px 4px 5px 0px #d7d7d7;
+    color: #fff;
+    background:rgba(245, 242, 242, 1); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#nav ul li{
+    padding-top:1px;
+    padding-right: 5px;
+    padding-left: 12px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float:none;
+}
+#nav ul a{
+    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover ul{ /* Display the dropdown on hover */
+    left:-33px; /* Bring back on-screen when needed */
+}
+#nav li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    background:rgba(#076acd, 1);
+}
+#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration:none;
 }
